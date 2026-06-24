@@ -37,28 +37,36 @@ int main()
    cout << "M1\tM2  \n";
    cout << "my name is \" zaid \"  \n";
 
+// declare and initialize variables
    string name = "zaid bouallala";
    int age = 24;
    string city = "el kelaa des sraghna";
    string country = "morocco";
    float monthly_salary = 1000.50;
-   double yearly_salary = 12000.75;
+   double yearly_salary = monthly_salary *  12;
    char gender = 'M';
    bool is_married = false;
-
+// display the information
    cout << "Name : " << name << endl;
     cout << "Age : " << age << endl;
     cout << "City : " << city << endl;
     cout << "Country : " << country << endl;
-    cout << "Monthly Salary : " << monthly_salary << endl;
+    cout << "Monthly Salary : " << monthly_salary  << endl;
     cout << "Yearly Salary : " << yearly_salary << endl;
     cout << "Gender : " << gender << endl;
     cout << "Is Married : " << is_married << endl;  
+
+
+    int a = 10 , b= 20 , c=30;
+    cout << b << "+" << endl;
+    cout << c << "+" << endl;
+    cout << a <<endl;
+    cout <<"________________________________________"<< endl;
+    cout <<"Total = "<< a+b+c << endl;
+
+    int my_age = 24;
+    cout << "After 5 years you will be " << my_age + 5 << " years old." << endl;
     
-
-
-
-
     return 0;
 } 
 

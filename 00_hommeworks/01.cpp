@@ -31,7 +31,7 @@ int main()
     in a multi line comment
     */
 
-   cout << "\a ";
+   cout << " ";
    cout << "M1\\M2 \n";
    cout << "M1\\\\M2 \n";
    cout << "M1\tM2  \n";

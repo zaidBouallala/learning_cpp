@@ -20,6 +20,7 @@ int main()
 
     cout << "Enter the therd number" << endl;
     cin >> n3;
+    sum = n1 + n2 + n3;
 
     cout << "The some of the 3 numbers is :  " << sum << endl;
 
@@ -35,6 +36,7 @@ int main()
     cout << "Enter the value of X : "<<endl;
     cin>> x;
     cout << "Enter the value of Y : "<< endl;
+    cin>> y;
     cout << "Before the SWAP the value of X IS : "<<x <<" and Y is : "<<y <<endl;
     swap = x;
     x = y;
@@ -45,8 +47,9 @@ int main()
     // 15# Rectangle Area :
 
     float lg , with ;
-    cout << "Enter the long and the with of the rectangle: "<< endl;
+    cout << "Enter the long  of the rectangle: "<< endl;
     cin >> lg;
+    cout << "Enter the width of the rectangle: "<< endl;
     cin >> with ;
 
     cout << "The value of the Rectangle Area is : "<< lg * with <<endl;
@@ -54,8 +57,9 @@ int main()
     // 17# Triangle Area 
     float basse , height;
 
-    cout << "Enter the values of the base and the hight of the triangle : "<< endl;
+    cout << "Enter the values of the base  of the triangle : "<< endl;
     cin >>basse;
+    cout << "Enter the values of the height of the triangle : "<< endl;
     cin >> height;
     cout << "The value of the Triangle Area is : "<< (basse * height)/2 <<endl;
     

@@ -250,6 +250,58 @@ void printRectangleArea(float area){
     cout << "The area of the rectangle is: " << area << endl;
 }
 
+// #26
+int ReadNumber(){
+     int N;
+    cout << "Please enter a number? " << endl;
+    cin >> N;
+    return N;
+}
+void printRangeFrom1ToN_usingWhileLoop(int N){
+    int i = 1;
+    while(i <= N){
+        cout << i << " ";
+        i++;
+    }
+}
+
+void printRangeFrom1ToN_usingForLoop(int N){
+    for(int i = 1; i <= N; i++){
+        cout << i << " ";
+    }
+}
+
+void printRangeFrom1ToN_usingDoWhileLoop(int N){
+    int i = 1;
+    do{
+        cout << i << " ";
+        i++;
+    }while(i <= N);
+}
+
+
+int  readNN(){
+    int n ;
+    cout << "Please enter a number? " << endl;
+    cin>> n;
+    return n;
+}
+
+int readPwer(){
+    int p;
+    cout << "Please enter a power? " << endl;
+    cin >> p;
+    return p;
+}
+
+int calculatePower(int n , int p){
+    int res = 1;
+    for(int i = 0; i < p; i++){
+        res *= n;
+    }
+    return res;
+}
+
 
 int main()
 {
@@ -270,13 +322,26 @@ int main()
     // read3Numbers(num1, num2, num3);
     // printMaxOfThreeNumbers(maxOfThreeNumbers(num1, num2, num3));
 
-    int num1, num2;
-    read2Numbers(num1, num2);
-    printNumbers(num1, num2);
-    // swapNumbers(num1, num2);
+    // int num1, num2;
+    // read2Numbers(num1, num2);
     // printNumbers(num1, num2);
+    // // swapNumbers(num1, num2);
+    // // printNumbers(num1, num2);
 
-    printRectangleArea(calculateRectangleArea(num1, num2));
+    // printRectangleArea(calculateRectangleArea(num1, num2));
+    // #26
+
+    // int N = ReadNumber();
+    // printRangeFrom1ToN_usingWhileLoop(N);
+    // printRangeFrom1ToN_usingForLoop(N);
+    // printRangeFrom1ToN_usingDoWhileLoop(N);
+
+     
+    int result = calculatePower(readNN(), readPwer());
+
+    cout << "Power of number is: " << result << endl;
+
+
 
     return 0;
 } 

@@ -7,5 +7,15 @@ int main()
     // The break statement is used to exit a loop or switch statement prematurely,
      //before the loop condition is met or before the switch statement has completed all its cases.
      // When the break statement is encountered, the control flow of the program jumps to the next statement after the loop or switch.
+
+    /* Example of break statement
+    while (condition) { 
+        // code to be executed
+        if (some_condition) {
+            break; // Exit the loop immediately
+        }
+        // more code to be executed
+    }
+    */
     return 0;
 }

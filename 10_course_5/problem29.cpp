@@ -80,11 +80,10 @@ void copyArrayOfPrimes(int arr[], int arrLength, int copyArr[], int &copyArrLeng
 int main() {
     srand((unsigned)time(NULL));
 
-    int arr[100];      // Declare an array to hold up to 100 integers.
+    int arr[100], copyArr[100];      // Declare an array to hold up to 100 integers.
 
     int arrLength = 0;     // Variable to store the number of elements in the array.
-    int copyArr[100];  // Declare another array to hold a copy of the original array.
-
+    
     int copyArrLength = 0; // Variable to store the number of elements in the copied array.
     ReadArray(arr, arrLength);
 

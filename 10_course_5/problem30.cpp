@@ -59,21 +59,18 @@ void sumElements(int arr1[],int arr2[], int arrLength , int sumArr[]){
 
 int main() {
     srand((unsigned)time(NULL));
-    int arr1[100];      // Declare an array to hold up to 100 integers.
-    int arr2[100];      // Declare an array to hold up to 100 integers.
-    int arrLength;     // Variable to store the number of elements in the array.
-    cout << "\nEnter number of elements:\n";
-    cin >> arrLength;  // Read the total number of elements the user wishes to input.
+
+    int arr1[100], arr2[100], sumArr[100];
+         // Declare an array to hold up to 100 integers.
+    int arrLength = ReadPositiveNumber("Enter the number of elements in the arrays: ");  // Read the desired length of the arrays from the user.
 
     ReadArray(arr1, arrLength);
     ReadArray(arr2, arrLength);
 
-    cout << "\narray 1 : "; 
+    cout << "\narray 1 : ";
     PrintArray(arr1, arrLength);
     cout << "\narray 2 : ";
     PrintArray(arr2, arrLength);
-
-    int sumArr[100];
     sumElements(arr1, arr2, arrLength, sumArr);
     cout << "\narray sum : ";
     PrintArray(sumArr, arrLength);

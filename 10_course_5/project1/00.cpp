@@ -190,7 +190,6 @@ void PrintResults(int round)
     cout<<"Game Winner: Player"<<endl;
     else
     cout<<" It's a Draw"<<endl;
-
 }
 
 int main()

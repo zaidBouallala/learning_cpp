@@ -123,3 +123,25 @@ void printQuestion(stRoundInfo &Round)
 
     cout << Round.Number2 << " ?\n";
 }
+
+void CheckAnswer(stRoundInfo &Round)
+{
+    int correct = CalculateAnswer(Round.Number1,Round.Number2,Round.PlayerChoiceOpType);
+
+    cout << "Your answer: ";
+    cin >> Round.Answer;
+
+    if(Round.Answer == correct)
+    {
+        system("color 2E");
+        Round.Ans_TrueOrFalse = True;
+        cout << Round.Answer << " Is the correct answer";
+    }
+    else
+    {
+        system("color 4F");
+        Beep(500,500); 
+        Round.Ans_TrueOrFalse = False;
+        cout << Round.Answer << " Is wrong!\nCorrect answer is " << correct << endl;
+    }
+}

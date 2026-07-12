@@ -28,3 +28,15 @@ struct stResultFinalGame
     enWinner Winner;
     string TextPassOrLose = "";
 };
+short RandNumber(short From, short To)
+{
+    return rand() % (To - From + 1) + From;
+}
+
+short HowManyQuestions()
+{
+    short howmanyq = 0;
+    cout << "How many questions do you want to answer: ";
+    cin >> howmanyq;
+    return howmanyq;
+}

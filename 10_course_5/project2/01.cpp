@@ -145,3 +145,46 @@ void CheckAnswer(stRoundInfo &Round)
         cout << Round.Answer << " Is wrong!\nCorrect answer is " << correct << endl;
     }
 }
+void Game()
+{
+    short questions = HowManyQuestions();
+
+    short right = 0; short wrong = 0;
+
+    stRoundInfo Round = ReadChoices();
+
+    for(int i = 1; i <= questions; i++)
+    {
+        cout << "\nQuestion [" << i << "/" << questions << "]\n";
+
+        
+
+        printQuestion(Round);
+        CheckAnswer(Round);
+
+         if(Round.Ans_TrueOrFalse == True)
+            right++;
+        else
+            wrong++;
+               
+    }
+
+    cout << "\nGame Over!\n";
+    cout << "Right Answers: " << right << endl;
+    cout << "Wrong Answers: " << wrong << endl;
+    if(right >= wrong)
+    {
+    cout << "\n_________________________________________________________________________[YOU PASSED!]__________________________________________________________________________";
+    system("color 2E");
+    }
+    else
+    {
+    Beep(500,300); 
+    Beep(500,300);
+    Beep(500,300);
+    cout << "\n_________________________________________________________________________[YOU FAILED!]__________________________________________________________________________";
+    system("color 4F");
+    }    
+}
+
+

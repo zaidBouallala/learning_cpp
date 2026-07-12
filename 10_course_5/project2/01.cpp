@@ -40,3 +40,86 @@ short HowManyQuestions()
     cin >> howmanyq;
     return howmanyq;
 }
+
+enDifLevel ChooseDiflevel()
+{
+    short choice = 0;
+    do
+    {
+        cout << "Enter difficulty level [1]Easy [2]Medium [3]Hard [4]Mix ";
+        cin >> choice;
+    }while(choice < 1 || choice > 4);
+    return (enDifLevel) choice;
+}
+
+enOpType ChooseQuestionType()
+{
+    short choice = 0;
+    do
+    {
+        cout << "Enter questions type [1]Add [2]Sub [3]Mult [4]Div [5]Mix ";
+        cin >> choice;
+    }while(choice < 1 || choice > 5);;
+    return (enOpType) choice;
+}
+stRoundInfo ReadChoices()
+{
+    stRoundInfo Round;
+
+    Round.PlayerChoiceOpType = ChooseQuestionType();
+    Round.PlayerChoiceDifLvl = ChooseDiflevel();
+
+    return Round;
+}
+
+short GenerateNumbers(enDifLevel level)
+{
+    switch (level)
+    {
+
+        case Easy: return RandNumber(1,10);
+        case Med: return RandNumber(10,50);
+        case Hard: return RandNumber(50,100);
+        case Mix: return RandNumber(1,100);
+
+    }
+}
+
+enOpType GenerateOperation(enOpType op)
+{
+    if(op == mix)
+        return (enOpType)RandNumber(1,4);
+    
+    return op;
+}
+
+short CalculateAnswer(short n1, short n2, enOpType op)
+{
+    switch(op)
+    {
+        case add: return n1 + n2;
+        case Sub: return n1 - n2;
+        case Mult: return n1 * n2;
+        case Div: return n1 / n2;
+    }
+}
+
+
+void printQuestion(stRoundInfo &Round)
+{
+    Round.Number1 = GenerateNumbers(Round.PlayerChoiceDifLvl);
+    Round.Number2 = GenerateNumbers(Round.PlayerChoiceDifLvl);
+    Round.PlayerChoiceOpType = GenerateOperation(Round.PlayerChoiceOpType);
+
+     cout << "\nWhat is: " << Round.Number1;
+
+    switch(Round.PlayerChoiceOpType)
+    {
+        case add: cout << " + "; break;
+        case Sub: cout << " - "; break;
+        case Mult: cout << " * "; break;
+        case Div: cout << " / "; break;
+    }
+
+    cout << Round.Number2 << " ?\n";
+}

@@ -186,5 +186,28 @@ void Game()
     system("color 4F");
     }    
 }
+bool AskIfPlayerWantsToPlayAgain()
+{
+    string ans ;
+    cout << "\n\nDo You Want To Play Again [Yes] or [No] ? ";
+    cin >> ans;
+    if(ans == "Yes" || ans == "y" || ans == "Y" || ans == "yes")
+    return true;
+    else if(ans == "No" || ans == "n" || ans == "N" || ans == "no")
+    return false;
+    
+}
+void PlayGame()
+{
+    do
+    {
+        system("cls");
+        system("color 07");
+        Game();
+
+    }while(AskIfPlayerWantsToPlayAgain());
+
+    cout << "\n_________________________________________________________________________[Game Closed]__________________________________________________________________________";
+}
 
 

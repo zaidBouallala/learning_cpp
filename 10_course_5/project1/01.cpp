@@ -132,3 +132,60 @@ int GameRules(enRPS choice,enRPS computerChoice)
   }
   else return 0;
 }
+
+string GetChoiceName(enRPS choice)
+{
+    switch(choice)
+    {
+        case enRPS::Stone:
+            return "Stone";
+        case enRPS::Paper:
+            return "Paper";
+        case enRPS::Scissors:
+            return "Scissors";
+        default:
+            return "Invalid Choice";
+    }
+}
+
+void PrintResultsForEvreyRound(int round)
+{
+    for(int i=1;i<=round;i++)
+    {
+    enRPS computerchoice=ComputerChoice();
+    enRPS playerchoice=MyChoice();
+    
+    cout<<"---------------Round ["<<i<<"]---------------"<<endl;
+    cout<<"Player choice: "<<GetChoiceName(playerchoice)<<endl;
+    
+    cout<<"Computer choice: "<<GetChoiceName(computerchoice)<<endl;
+    
+    int winner=GameRules(playerchoice,computerchoice);
+
+    if(winner==2)
+    cout<<"Round Winner: Computer"<<endl;
+    else if(winner==1)
+    cout<<"Round Winner: Player"<<endl;
+    else
+    cout<<"Round Winner: Draw"<<endl;
+
+    }
+
+}
+
+void PrintResults(int round)
+{
+   cout<<endl;
+    cout<<"             GAME OVER          \n"<<endl;
+    cout<<"Total Rounds: "<<round<<endl;
+    cout<<"Player Wins: "<<countMyWin<<endl;
+    cout<<"Computer Wins: "<<countComputerWin<<endl;
+    cout<<"Draws: "<<countDraw<<endl;
+
+    if(countComputerWin>countMyWin)
+    cout<<"Game Winner: Computer"<<endl;
+    else if(countMyWin>countComputerWin)
+    cout<<"Game Winner: Player"<<endl;
+    else
+    cout<<" It's a Draw"<<endl;
+}

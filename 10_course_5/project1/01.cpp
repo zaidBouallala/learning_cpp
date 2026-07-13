@@ -54,3 +54,81 @@ enRPS MyChoice()
     else 
       return enRPS::Scissors; 
 }
+enRPS ComputerChoice()
+{
+    enRPS computerChoice=(enRPS)RandomNumber(1,3);
+    if(computerChoice==enRPS::Stone)
+      return enRPS::Stone; 
+
+    else if(computerChoice==enRPS::Paper)
+      return enRPS::Paper;
+
+    else 
+      return enRPS::Scissors;  
+}
+
+int GameRules(enRPS choice,enRPS computerChoice)
+{
+
+
+ if (choice==enRPS::Stone && computerChoice==enRPS::Stone)
+  {
+  countDraw++;
+  system ("color 0E");
+  return 0;
+  }
+ else if (choice==enRPS::Stone && computerChoice==enRPS::Paper)
+  {
+  countComputerWin++;
+  system("color 0C");
+  return 2;
+  }
+ 
+ else if (choice==enRPS::Stone && computerChoice==enRPS::Scissors)
+  {
+  countMyWin++;
+  system("color 0A");
+  return 1;
+  }
+ else if (choice==enRPS::Paper && computerChoice==enRPS::Stone)
+  {
+  countMyWin++;
+  system("color 0A");
+  return 1;
+  }
+ else if (choice==enRPS::Paper && computerChoice==enRPS::Paper)
+  {
+  countDraw++;
+  system ("color 0E");
+  return 0;
+  }
+    
+ else if (choice==enRPS::Paper && computerChoice==enRPS::Scissors)
+  {
+  countComputerWin++;
+  system("color 0C");
+  return 2;
+  }
+
+ else if (choice==enRPS::Scissors && computerChoice==enRPS::Stone)
+  {
+  countComputerWin++;
+  system("color 0C");
+  return 2;
+  }
+ 
+ else if (choice==enRPS::Scissors && computerChoice==enRPS::Paper)
+  {
+  countMyWin++;
+  system("color 0A");
+  return 1;
+  }
+ 
+ else if (choice==enRPS::Scissors && computerChoice==enRPS::Scissors)
+  {
+   countDraw++;
+  system ("color 0E");
+  return 0;
+  }
+  else return 0;
+}

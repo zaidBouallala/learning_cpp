@@ -189,3 +189,16 @@ void PrintResults(int round)
     else
     cout<<" It's a Draw"<<endl;
 }
+
+int main()
+{
+ 
+  srand((unsigned)time(NULL));
+
+  int r=Rounds();
+  PrintResultsForEvreyRound(r);
+  PrintResults(r);
+
+
+    return 0;
+}

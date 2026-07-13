@@ -25,4 +25,32 @@ int Rounds()
   
     return round;
 }
+void RoundLength(int round)
+{  
 
+     for(int i = 1 ;i <= round;i++)
+    {
+      cout<<"Round ["<<i<<"] begins:"<<endl;
+    }
+}
+
+enRPS MyChoice()
+{
+    int choice;
+    cout<<"Your Choice: [1]:Stone, [2]:Paper, [3]:Scissors ?"<<endl;
+    cin>>choice;
+    choice=(enRPS)choice;
+    while(choice < 1 || choice > 3)
+    {
+    cout << "Invalid Choice, enter again: ";
+    cin >> choice;
+    }
+    if(choice==enRPS::Stone)
+      return enRPS::Stone; 
+
+    else if(choice==enRPS::Paper)
+      return enRPS::Paper;
+
+    else 
+      return enRPS::Scissors; 
+}

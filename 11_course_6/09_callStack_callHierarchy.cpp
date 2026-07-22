@@ -21,6 +21,7 @@ cout << "Hi I'm function2 " << endl;
 }
 void Function1()
 {
+Function4();
 Function2();
 
 cout << "Hi I'm function1 " << endl;

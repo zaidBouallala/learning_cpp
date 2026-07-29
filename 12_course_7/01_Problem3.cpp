@@ -67,6 +67,7 @@ cout << "\n The following are the sum of each row in the matrix : \n";
 SumOfEachRow(arr, 3, 3, arrSum);
 printTheSumForEachRow(arrSum, 3);
 
+
 system("pause>0");
 
 }

@@ -29,8 +29,8 @@ cout <<setw(3) << arr[i][j] << " ";
 }
 cout << "\n";
 }
-}
 
+}
 void printTheSumForEachRow(int arr[3][3], short rows , short cols){
     for(short i = 0 ;i < rows; i++){
         int sum = 0;

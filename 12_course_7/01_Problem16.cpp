@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cmath>
+
 using namespace std;
 void PrintMatrix(int arr[3][3], short Rows, short Cols)
 {
@@ -33,8 +35,7 @@ return NumberCount;
 bool IsSparseMatrix(int Matrix1[3][3], short Rows, short Cols)
 {
 short MatrixSize = Rows * Cols;
-return (CountNumberInMatrix(Matrix1, 0, 3, 3) >= ceil((float)
-MatrixSize / 2));
+return (CountNumberInMatrix(Matrix1, 0, 3, 3) >= ceil((float) MatrixSize / 2));
 }
 
 int main()

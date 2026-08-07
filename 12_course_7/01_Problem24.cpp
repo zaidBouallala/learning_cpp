@@ -4,7 +4,7 @@ using namespace std;
 string ReadString()
 {
 string S1;
-cout << "Please Enter Your String?\n";
+cout << "Please Enter Your String?" << endl;
 getline(cin, S1);
 return S1;
 }

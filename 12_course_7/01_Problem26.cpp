@@ -10,7 +10,8 @@ return S1;
 }
 string UpperAllString(string S1)
 {
-for (short i = 0; i < S1.length(); i++)
+    short poss =S1.length(); 
+for (short i = 0; i < poss; i++)
 {
 S1[i] = toupper(S1[i]);
 }

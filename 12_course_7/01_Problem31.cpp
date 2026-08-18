@@ -37,9 +37,8 @@ Counter++;
 }
 return Counter;
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem # 31/3 Solution Using C++
+
+
 int main()
 {
 string S1 = ReadString();

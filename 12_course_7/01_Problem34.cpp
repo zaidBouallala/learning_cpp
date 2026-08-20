@@ -28,3 +28,4 @@ int main()
 string S1 = ReadString();
 PrintVowels(S1);
 system("pause>0");
+}

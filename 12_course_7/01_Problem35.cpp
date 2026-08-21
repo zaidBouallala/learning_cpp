@@ -30,9 +30,6 @@ if (S1 != "")
 cout << S1 << endl; // it print last word of the string.
 }
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem # 35/3 Solution Using C++
 int main()
 {
 PrintEachWordInString(ReadString());

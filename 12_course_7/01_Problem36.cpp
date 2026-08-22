@@ -31,9 +31,6 @@ Counter++; // it counts the last word of the string.
 }
 return Counter;
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem # 36/3 Solution Using C++
 int main()
 {
 string S1 = ReadString();

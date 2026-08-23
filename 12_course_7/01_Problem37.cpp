@@ -31,9 +31,7 @@ vString.push_back(S1); // it adds last word of the string.
 }
 return vString;
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem # 37/3 Solution Using C++
+
 int main()
 {
 vector<string> vString;

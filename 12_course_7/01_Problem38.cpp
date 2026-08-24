@@ -27,9 +27,6 @@ string Trim(string S1)
 {
 return (TrimLeft(TrimRight(S1)));
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem # 38/3 Solution Using C++
 int main()
 {
 string S1 = " Mohammed Abu-Hahdoud ";

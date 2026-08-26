@@ -20,9 +20,6 @@ S1 = S1 + arrString[i] + Delim;
 }
 return S1.substr(0, S1.length() - Delim.length());
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem #40/3 Solution Using C++
 int main()
 {
 vector<string> vString = { "Mohammed","Faid","Ali","Maher" };

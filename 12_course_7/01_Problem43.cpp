@@ -43,9 +43,7 @@ S1[i] = tolower(S1[i]);
 }
 return S1;
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem #43/3 Solution Using C++
+
 string ReplaceWordInStringUsingSplit(string S1, string
 StringToReplace, string sRepalceTo, bool MatchCase = true)
 {

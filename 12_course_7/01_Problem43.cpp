@@ -70,9 +70,7 @@ s = sRepalceTo;
 }
 return JoinString(vString, " ");
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem #43/3 Solution Using C++
+
 int main()
 {
 string S1 = "Welcome to Jordan , Jordan is a nice country";

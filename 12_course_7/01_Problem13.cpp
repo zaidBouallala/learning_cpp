@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+
+
 using namespace std;
 void PrintMatrix(int arr[3][3], short Rows, short Cols)
 {
@@ -14,6 +16,7 @@ cout << setw(3) << arr[i][j] << " ";
 cout << "\n";
 }
 }
+
 bool IsIdentityMarix(int Matrix1[3][3], short Rows, short Cols)
 {
 //check Diagonal elements are 1 and rest elements are 0

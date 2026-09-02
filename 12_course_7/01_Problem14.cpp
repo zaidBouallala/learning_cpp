@@ -14,26 +14,26 @@ cout << setw(3) << arr[i][j] << " ";
 cout << "\n";
 }
 }
-bool IsScalarMarix(int Matrix1[3][3], short Rows, short Cols)
+bool IsScalarMarix(int Matrix[3][3], short Rows, short Cols)
 {
-int FirstDiagElemement = Matrix1[0][0];
-for (short i = 0; i < Rows; i++)
-{
-for (short j = 0; j < Cols; j++)
-{
-//check for diagonals element
-if (i == j && Matrix1[i][j] != FirstDiagElemement)
-{
-return false;
-}
-//check for rest elements
-else if (i != j && Matrix1[i][j] != 0)
-{
-return false;
-}
-}
-}
-return true;
+    int firstElement = Matrix[0][0];
+    for(short i = 0;i < Rows; i++){
+        for(short j = 0;j < Cols ; j++){
+            if(i == j){
+                if(Matrix[i][j] != firstElement){
+                    return false;
+                }
+            }else{
+                if(Matrix[i][j] != 0){
+                    return false;
+                }
+            }
+
+
+
+        }
+    }
+    return true;
 }
 
 
@@ -46,5 +46,7 @@ if (IsScalarMarix(Matrix1, 3, 3))
 cout << "\nYES: Matrix is scalar.";
 else
 cout << "\nNo: Matrix is NOT scalar.";
+
+
 system("pause>0");
 }

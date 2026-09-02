@@ -23,9 +23,7 @@ vString.push_back(S1); // it adds last word of the string.
 }
 return vString;
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem #43/3 Solution Using C++
+
 string JoinString(vector<string> vString, string Delim)
 {
 string S1;

@@ -16,8 +16,7 @@ return S2;
 }
 int main()
 {
-string S1 = "Welcome to Jordan, Jordan is a nice country; it's
-amazing.";
+string S1 = "Welcome to Jordan, Jordan is a nice country; it's amazing.";
 cout << "Original String:\n" << S1;
 cout << "\n\nPauncuations Removed:\n" <<
 RemovePunctuationsFromString(S1);

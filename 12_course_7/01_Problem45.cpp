@@ -26,9 +26,7 @@ cout << "Enter AccountBalance? ";
 cin >> Client.AccountBalance;
 return Client;
 }
-ProgrammingAdvices.com
-© Copyright 2022
-Problem #45/3 Solution Using C++
+
 string ConvertRecordToLine(sClient Client, string Seperator =
 "#//#")
 {

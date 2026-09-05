@@ -60,8 +60,7 @@ cout << "\nAccount Balance: " << Client.AccountBalance;
 }
 int main()
 {
-string stLine = "A150#//#1234#//#Mohammed Abu-
-Hadhoud#//#079999#//#5270.000000";
+string stLine = "A150#//#1234#//#Mohammed Abu-Hadhoud#//#079999#//#5270.000000";
 cout << "\nLine Record is:\n";
 cout << stLine;
 sClient Client = ConvertLinetoRecord(stLine);

@@ -1,47 +1,76 @@
 #include <iostream>
 #include <string>
-#include <iomanip>
+
 using namespace std;
-void PrintMatrix(int arr[3][3], short Rows, short Cols)
+
+int randomNumber(int min, int max)
 {
-for (short i = 0; i < Rows; i++)
-{
-for (short j = 0; j < Cols; j++)
-{
-//printf(" %0*d ", 2, arr[i][j]);
-cout << setw(3) << arr[i][j] << " ";
-}
-cout << "\n";
-}
-}
-short CountNumberInMatrix(int Matrix1[3][3], int Number, short
-Rows, short Cols)
-{
-short NumberCount = 0;
-for (short i = 0; i < Rows; i++)
-{
-for (short j = 0; j < Cols; j++)
-{
-if (Matrix1[i][j] == Number)
-{
-NumberCount++;
-};
-}
-}
-return NumberCount;
+    return rand() % (max - min + 1) + min;
 }
 
+void printMatrix(int arr[3][3], short Rows, short Cols)
+{
+    for (short i = 0; i < Rows; i++)
+    {
+        for (short j = 0; j < Cols; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << "\n";
+    }
+}
+
+void fillMatrix(int arr[3][3], short Rows, short Cols)
+{
+    for (short i = 0; i < Rows; i++)
+    {
+        for (short j = 0; j < Cols; j++)
+        {
+            arr[i][j] = randomNumber(1, 9);
+        }
+    }
+}
+
+void readNember(int &number)
+{
+    cout << "Enter a number: ";
+    cin >> number;
+}
+
+
+int CountNumberInMatrix(int arr[3][3], short Rows, short Cols, int number)
+{
+    int count = 0;
+    for (short i = 0; i < Rows; i++)
+    {
+        for (short j = 0; j < Cols; j++)
+        {
+            if (arr[i][j] == number)
+            {
+                count++;
+            }
+        }
+    }
+    return count;
+}
 
 
 int main()
 {
-int Matrix1[3][3] = { {9,1,12},{0,9,1},{0,9,9} };
-cout << "\nMatrix1:\n";
-PrintMatrix(Matrix1, 3, 3);
-int Number;
-cout << "\nEnter the number to count in matrix? ";
-cin >> Number;
-cout << "\nNumber " << Number << " count in matrix is "
-<< CountNumberInMatrix(Matrix1, Number, 3, 3);
-system("pause>0");
+    int Matrix[3][3];
+    fillMatrix(Matrix, 3, 3);
+    cout << "\nMatrix:\n";
+    printMatrix(Matrix, 3, 3);
+    int number;
+    readNember(number);
+    int count = CountNumberInMatrix(Matrix, 3, 3, number);
+    cout << "\nThe number " << number << " appears " << count << " times in the matrix.\n";
+
+    
+
+
+
+
+    system("pause>0");
+    return 0;
 }

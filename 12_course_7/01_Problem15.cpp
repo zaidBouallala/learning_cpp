@@ -65,12 +65,6 @@ int main()
     readNember(number);
     int count = CountNumberInMatrix(Matrix, 3, 3, number);
     cout << "\nThe number " << number << " appears " << count << " times in the matrix.\n";
-
-    
-
-
-
-
     system("pause>0");
     return 0;
 }

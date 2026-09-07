@@ -29,7 +29,6 @@ int countZeroInMatrix(int arr[3][3], short Rows, short Cols)
     }
     return count;
 }
-
 void isSparseMatrix(int arr[3][3], short Rows, short Cols)
 {
     int count = countZeroInMatrix(arr, Rows, Cols);
@@ -46,7 +45,6 @@ int Matrix1[3][3] = { {0,0,12},{9,0,1},{0,0,9} };
 cout << "\nMatrix1:\n";
 PrintMatrix(Matrix1, 3, 3);
 isSparseMatrix(Matrix1, 3, 3);
-
 system("pause>0");
 }
 

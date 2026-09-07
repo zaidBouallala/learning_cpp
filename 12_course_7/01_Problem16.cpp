@@ -40,7 +40,6 @@ void isSparseMatrix(int arr[3][3], short Rows, short Cols)
         cout << "\nNO: Matrix is NOT sparse.";
     }
 }
-
 int main()
 {
 int Matrix1[3][3] = { {0,0,12},{9,0,1},{0,0,9} };

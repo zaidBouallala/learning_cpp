@@ -28,8 +28,6 @@ Counter++;
 }
 return Counter;
 }
-
-
 short CountCapitalLetters(string S1)
 {
 short Counter = 0;

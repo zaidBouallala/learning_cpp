@@ -31,7 +31,6 @@ vString.push_back(S1); // it adds last word of the string.
 }
 return vString;
 }
-
 int main()
 {
 vector<string> vString;

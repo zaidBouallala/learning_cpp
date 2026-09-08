@@ -37,8 +37,6 @@ Counter++;
 }
 return Counter;
 }
-
-
 int main()
 {
 string S1 = ReadString();

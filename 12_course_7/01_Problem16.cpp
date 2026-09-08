@@ -16,7 +16,6 @@ cout << setw(3) << arr[i][j] << " ";
 cout << "\n";
 }
 }
-
 int countZeroInMatrix(int arr[3][3], short Rows, short Cols)
 {
     int count = 0;

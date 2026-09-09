@@ -33,8 +33,7 @@ else
 {
 if (tolower(S1[i]) == tolower(Letter))
 Counter++;
-}
-}
+}}
 return Counter;
 }
 int main()

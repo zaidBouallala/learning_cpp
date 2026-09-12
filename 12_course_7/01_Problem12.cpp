@@ -28,7 +28,7 @@ void PrintMatrix(int arr[3][3], short Rows, short Cols)
         for (short j = 0; j < Cols; j++)
         {
             printf(" %0*d ", 2, arr[i][j]);
-            //cout << setw(3) << arr[i][j] << " ";
+            // cout << setw(3) << arr[i][j] << " ";
         }
         cout << "\n";
     }
@@ -49,16 +49,11 @@ bool AreTepicalEqualMatrices(int Matrix1[3][3], int Matrix2[3][3], short Rows, s
     return true;
 }
 
-
-
-
-
-
 int main()
 {
     srand((unsigned)time(NULL));
 
-    int arr1[3][3] , arr2[3][3];
+    int arr1[3][3], arr2[3][3];
     FillMatrixWithRandomNumbers(arr1, 3, 3);
     cout << "\nMatrix1:\n";
     PrintMatrix(arr1, 3, 3);

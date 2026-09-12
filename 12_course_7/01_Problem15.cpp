@@ -37,7 +37,6 @@ void readNember(int &number)
     cin >> number;
 }
 
-
 int CountNumberInMatrix(int arr[3][3], short Rows, short Cols, int number)
 {
     int count = 0;
@@ -53,7 +52,6 @@ int CountNumberInMatrix(int arr[3][3], short Rows, short Cols, int number)
     }
     return count;
 }
-
 
 int main()
 {

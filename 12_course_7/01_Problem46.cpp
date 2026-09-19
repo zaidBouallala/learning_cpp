@@ -63,5 +63,6 @@ int main()
     sClient Client = ConvertLinetoRecord(stLine);
     PrintClientRecord(Client);
     system("pause>0");
+    
     return 0;
 }

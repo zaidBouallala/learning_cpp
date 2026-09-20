@@ -54,7 +54,7 @@ void PrintClientRecord(sClient Client)
     cout << "\nName : " << Client.Name;
     cout << "\nPhone : " << Client.Phone;
     cout << "\nAccount Balance: " << Client.AccountBalance;
-    
+
 }
 int main()
 {

@@ -54,6 +54,7 @@ void PrintClientRecord(sClient Client)
     cout << "\nName : " << Client.Name;
     cout << "\nPhone : " << Client.Phone;
     cout << "\nAccount Balance: " << Client.AccountBalance;
+    
 }
 int main()
 {
@@ -63,6 +64,5 @@ int main()
     sClient Client = ConvertLinetoRecord(stLine);
     PrintClientRecord(Client);
     system("pause>0");
-    
     return 0;
 }

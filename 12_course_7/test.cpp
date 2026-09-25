@@ -10,7 +10,5 @@ int main()
     cout << "Enter your age: "<< endl;
     cin >> age;
     cout << "Your age is : " << age << endl;
-    cout << "Your age is : " << age << endl;
-    cout << "Your age is : " << age << endl;
     return 0;
 }

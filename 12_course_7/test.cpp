@@ -3,6 +3,15 @@
 #include <string>
 
 using namespace std;
+int RandomNumber(int from, int to)
+{
+    int randNum = rand() % (to - from + 1) + from;
+    return randNum;
+
+}
+
+
+
 
 int main()
 {

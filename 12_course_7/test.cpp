@@ -7,14 +7,11 @@ int RandomNumber(int from, int to)
 {
     int randNum = rand() % (to - from + 1) + from;
     return randNum;
-
 }
 
-
-
-
 int main()
-{
+{ 
+
     short age ; 
     cout << "Enter your age: "<< endl;
     cin >> age;

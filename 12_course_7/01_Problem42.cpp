@@ -26,3 +26,4 @@ int main()
                                                     StringToReplace, ReplaceTo);
     system("pause>0");
 }
+

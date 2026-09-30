@@ -10,7 +10,7 @@ string ReplaceWordInStringUsingBuiltInFunction(string S1, string StringToReplace
         S1 = S1.replace(pos, StringToReplace.length(),
                         sRepalceTo);
         pos = S1.find(StringToReplace); // find next
-        pos = S1.find(StringToReplace, pos + sRepalceTo.length());
+                                        // pos = S1.find(StringToReplace, pos + sRepalceTo.length());
     }
     return S1;
 }
@@ -27,4 +27,3 @@ int main()
                                                     StringToReplace, ReplaceTo);
     system("pause>0");
 }
-

@@ -21,7 +21,6 @@ int main()
     cout << "Your age is : " << age << endl;
     cout << "Random number between 1 and 100 : " << RandomNumber(1, 100) << endl;
     cout << "Random number between 1 and 100 : " << RandomNumber(1, 100) << endl;
-    cout << "Random number between 1 and 100 : " << RandomNumber(1, 100) << endl;
  
     return 0;
 }

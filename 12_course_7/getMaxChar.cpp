@@ -9,7 +9,6 @@ struct King
     int hisCrowns;
 };
 
-
 char getMax(string str){
     char theSurvivalKing = str[0];
     int hisCrowns = 0;
@@ -21,11 +20,7 @@ char getMax(string str){
         if(str[i] == str[j]) {
             hisCrowns++;
         }
-    }    
-        King king;
-        king.theSurvivalKing = str[i];
-        king.hisCrowns = hisCrowns;
-        listOfKings[i] = king;
+    } 
     }
     cout << "The list of kings: " << endl;
     for(int i = 0; i < 3 ; i++){

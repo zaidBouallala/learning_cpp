@@ -4,7 +4,6 @@
 using namespace std;
 struct King
 {
-    /* data */
     char theSurvivalKing;
     int hisCrowns;
 };

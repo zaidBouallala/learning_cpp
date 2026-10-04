@@ -4,7 +4,7 @@
 // go to the next line and write the code to do that.
 using namespace std;
 
-char getMax(const string& str) {
+char getMax(const string& str , int& maxCount) {
     if (str.empty()) {
         return '\0';
     }
@@ -28,8 +28,6 @@ char getMax(const string& str) {
         }
     }
 
-   
-
     return maxChar;
 }
 
@@ -38,9 +36,10 @@ int main() {
     cout << "Enter a string: ";
     getline(cin, input);
 
-    char maxChar = getMax(input);
+    int maxCount = 0;
+    char maxChar = getMax(input, maxCount);
     if (maxChar != '\0') {
-        cout << "The character that appears the most is: '" << maxChar << "'" << endl;
+        cout << "The character that appears the most is: '" << maxChar << "' and it appears " << maxCount << " times." << endl;
     } else {
         cout << "The string is empty." << endl;
     }

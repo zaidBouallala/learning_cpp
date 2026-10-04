@@ -28,13 +28,7 @@ char getMax(const string& str) {
         }
     }
 
-    // Print the list of characters and their counts
-    cout << "The list of characters and their counts:" << endl;
-    for (int i = 0; i < 256; i++) {
-        if (charCount[i] > 0) {
-            cout << "Character: '" << static_cast<char>(i) << "' appears " << charCount[i] << " times." << endl;
-        }
-    }
+   
 
     return maxChar;
 }
@@ -50,6 +44,7 @@ int main() {
     } else {
         cout << "The string is empty." << endl;
     }
+    
 
     return 0;
 }

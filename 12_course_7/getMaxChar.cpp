@@ -40,6 +40,7 @@ int main() {
     char maxChar = getMax(input, maxCount);
     if (maxChar != '\0') {
         cout << "The character that appears the most is: '" << maxChar << "' and it appears " << maxCount << " times." << endl;
+        cout << "The character that appears the most is: '" << maxChar << "' and it appears " << maxCount << " times." << endl;
     } else {
         cout << "The string is empty." << endl;
     }

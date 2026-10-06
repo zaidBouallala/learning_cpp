@@ -15,6 +15,7 @@ char getMax(const string& str , int& maxCount) {
     // Count the occurrences of each character
     for (char c : str) {
         charCount[static_cast<unsigned char>(c)]++;
+        charCount[static_cast<unsigned char>(c)]++;
     }
 
     // Find the character with the maximum count

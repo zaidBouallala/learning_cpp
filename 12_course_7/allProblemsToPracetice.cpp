@@ -23,6 +23,13 @@ void PrintMatrix(int matrix[3][3], short rows, short cols){
     }
 
 }
+int sumForEachRow(short row,short rows, int arr[3][3]){
+    int sum = 0; 
+    for(short i = 0 ; i < rows ; i++)
+    sum += arr[row][i];
+
+    return sum;
+}
 
 int main()
 {
@@ -34,7 +41,7 @@ int main()
     cout << "The following is the matrix filled with random numbers between 1 and 100: " << endl;
     PrintMatrix(arr, 3,  3);
 
-    
-
-
+    cout << "the sum for the row 1 is : " << sumForEachRow(0, 3,arr) << endl ;
+    cout << "the sum for the row 2 is : " << sumForEachRow(1, 3,arr) << endl ;
+    cout << "the sum for the row 3 is : " << sumForEachRow(2, 3,arr) << endl ;
 }

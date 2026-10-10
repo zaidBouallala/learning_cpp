@@ -47,7 +47,6 @@ int main()
     cout << "The following is the matrix filled with random numbers between 1 and 100: " << endl;
     PrintMatrix(arr, 3,  3);
 
-    cout << "the sum for the row 1 is : " << sumForEachRow(0, 3,arr) << endl ;
-    cout << "the sum for the row 2 is : " << sumForEachRow(1, 3,arr) << endl ;
-    cout << "the sum for the row 3 is : " << sumForEachRow(2, 3,arr) << endl ;
+    cout << endl;
+    printSum(arr, 3, 3);
 }

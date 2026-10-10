@@ -30,6 +30,12 @@ int sumForEachRow(short row,short rows, int arr[3][3]){
 
     return sum;
 }
+ 
+void printSum(int arr[3][3], short rows, short cols){
+    for(short i = 0; i < rows ; i++){
+        cout << "the sum for the row " << i+1 << " is : " << sumForEachRow(i, rows, arr) << endl ;
+    }
+}
 
 int main()
 {

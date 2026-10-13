@@ -33,7 +33,7 @@ void PrintMatrix(int arr[3][3], short rows, short cols)
     }
 }
 
-int SumForEachRow(int arr[3][3], short rows, short cols, short RowNumber)
+int SumForEachRow(int arr[3][3] , short cols, short RowNumber)
 {
     int res = 0;
 
@@ -45,11 +45,11 @@ int SumForEachRow(int arr[3][3], short rows, short cols, short RowNumber)
     return res;
 }
 
-void FillSumArray(int arr[3][3], int sum[3], short rows, short cols)
+void FillSumArray(int arr[3][3], int sum[3], short cols)
 {
-    for (short i = 0; i < rows; i++)
+    for (short i = 0; i < cols; i++)
     {
-        sum[i] = SumForEachRow(arr, 3, 3, i);
+        sum[i] = SumForEachRow(arr, 3, i);
     }
 }
 
@@ -57,7 +57,7 @@ void PrintSumArray(int sum[3], short rows)
 {
     for (short i = 0; i < rows; i++)
     {
-        cout << "The sum of the row number [" << i + 1 << "] is : " << sum[i] << endl;
+        cout << "Row " << i + 1 << " Sum = " << sum[i] << endl;
     }
 }
 
@@ -66,12 +66,13 @@ int main()
     srand((unsigned)time(NULL));
 
     int arr[3][3];
-    int sum[3];
+    int sumArr[3];
 
     FillMatrixWithRandomNumbres(arr, 3, 3);
     PrintMatrix(arr, 3, 3);
-    FillSumArray(arr, sum, 3, 3);
-    PrintSumArray(sum, 3);
+    cout << endl << "The sum result is : " << endl;
+    FillSumArray(arr, sumArr, 3);
+    PrintSumArray(sumArr, 3);
 
     return 0;
 }

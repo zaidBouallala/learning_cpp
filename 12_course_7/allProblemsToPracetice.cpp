@@ -46,8 +46,6 @@ int main()
     FillMatrixWithRandomNumbers(arr, 3, 3);
     cout << "The following is the matrix filled with random numbers between 1 and 100: " << endl;
     PrintMatrix(arr, 3,  3);
-    PrintMatrix(arr, 3,  3);
-    PrintMatrix(arr, 3,  3);
 
     cout << endl;
     printSum(arr, 3, 3);

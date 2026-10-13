@@ -4,6 +4,17 @@
 
 using namespace std;
 
+int ColSum(int arr[3][3], short rows, short colNumber)
+{
+    int sum = 0;
+    for (int i = 0; i < rows; i++){
+
+        sum += arr[i][colNumber];
+
+    }
+    return sum;
+}
+
 int RandomNumber(int From, int To)
 {
     // Function to generate a random number
@@ -33,14 +44,10 @@ void PrintMatrix(int arr[3][3], short Rows, short Cols)
 }
 void printTheSumForEachCol(int arr[3][3], short rows, short cols)
 {
-    for (short i = 0; i < rows; i++)
+
+    for (short j = 0; j < cols; j++)
     {
-        int sum = 0;
-        for (short j = 0; j < cols; j++)
-        {
-            sum += arr[j][i];
-        }
-        cout << "Col " << i + 1 << " Sum = " << sum << endl;
+        cout << "Col " << j + 1 << " Sum = " << ColSum(arr,3,j) << endl;
     }
 }
 

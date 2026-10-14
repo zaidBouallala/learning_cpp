@@ -61,6 +61,7 @@ int main()
     PrintMatrix(arr, 3, 3);
     cout << "\n The following are the sum of each col in the matrix : \n";
     printTheSumForEachCol(arr, 3, 3);
+    printTheSumForEachCol(arr, 3, 3);
 
     return 0;
 }

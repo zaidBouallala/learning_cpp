@@ -48,6 +48,7 @@ void printTheSumForEachCol(int arr[3][3], short rows, short cols)
     for (short j = 0; j < cols; j++)
     {
         cout << "Col " << j + 1 << " Sum = " << ColSum(arr,3,j) << endl;
+        cout << "Col " << j + 1 << " Sum = " << ColSum(arr,3,j) << endl;
     }
 }
 

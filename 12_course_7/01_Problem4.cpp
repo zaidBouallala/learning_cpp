@@ -7,10 +7,10 @@ using namespace std;
 int ColSum(int arr[3][3], short rows, short colNumber)
 {
     int sum = 0;
-    for (int i = 0; i < rows; i++){
+    for (int i = 0; i < rows; i++)
+    {
 
         sum += arr[i][colNumber];
-
     }
     return sum;
 }
@@ -47,8 +47,7 @@ void printTheSumForEachCol(int arr[3][3], short rows, short cols)
 
     for (short j = 0; j < cols; j++)
     {
-        cout << "Col " << j + 1 << " Sum = " << ColSum(arr,3,j) << endl;
-        cout << "Col " << j + 1 << " Sum = " << ColSum(arr,3,j) << endl;
+        cout << "Col " << j + 1 << " Sum = " << ColSum(arr, 3, j) << endl;
     }
 }
 

@@ -28,6 +28,7 @@ void FillMatrixWithRandomNumbers(int arr[3][3], short Rows, short Cols)
         for (short j = 0; j < Cols; j++)
         {
             arr[i][j] = RandomNumber(1, 100);
+            arr[i][j] = RandomNumber(1, 100);
         }
     }
 }

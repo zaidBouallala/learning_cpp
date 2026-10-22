@@ -6,7 +6,8 @@ using namespace std;
 
 int ColSum(int arr[3][3], short rows, short colNumber)
 {
-    int sum = 0;
+    int sum = 0; 
+    sum = 0;
     for (int i = 0; i < rows; i++)
     {
 

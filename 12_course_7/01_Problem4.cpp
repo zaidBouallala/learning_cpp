@@ -3,6 +3,7 @@
 #include <iomanip>
 
 using namespace std;
+using namespace std;
 
 int ColSum(int arr[3][3], short rows, short colNumber)
 {

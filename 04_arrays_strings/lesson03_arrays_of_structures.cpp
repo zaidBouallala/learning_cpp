@@ -3,10 +3,10 @@ using namespace std;
 
 struct strInfo
 {
-   string firstName;
-   string lastName;
+    string firstName;
+    string lastName;
     int age;
-    string phone; 
+    string phone;
 };
 int main()
 {
@@ -23,7 +23,7 @@ int main()
     persons[1].phone = "+0987654321";
 
     cout << "Person 1: " << persons[0].firstName << " " << persons[0].lastName << ", Age: " << persons[0].age << ", Phone: " << persons[0].phone << endl;
-    cout << "Person 2: " << persons[1].firstName << " "<< persons[1].lastName << ", Age: " << persons[1].age << ", Phone: " << persons[1].phone << endl;    
-    
+    cout << "Person 2: " << persons[1].firstName << " " << persons[1].lastName << ", Age: " << persons[1].age << ", Phone: " << persons[1].phone << endl;
+
     return 0;
 }

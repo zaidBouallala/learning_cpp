@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 int main()
 {
     int x[6];
@@ -11,8 +10,6 @@ int main()
     x[3] = 40;
     x[4] = 50;
     x[5] = 512;
-
-
 
     cout << "The value of x[0] is: " << x[0] << endl;
     cout << "The value of x[1] is: " << x[1] << endl;

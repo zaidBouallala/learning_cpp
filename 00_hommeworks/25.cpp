@@ -2,11 +2,13 @@
 #include <cmath>
 using namespace std;
 
-float myFunction(float arr[3]) {
-   return ( arr[0] + arr[1] + arr[2] ) / 3;
+float myFunction(float arr[3])
+{
+    return (arr[0] + arr[1] + arr[2]) / 3;
 }
 
-int main(){
+int main()
+{
 
     float Grades[3];
     cout << "Enter the first number: ";

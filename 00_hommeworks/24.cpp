@@ -2,9 +2,9 @@
 #include <string>
 
 using namespace std;
-struct stPerson 
+struct stPerson
 {
-    
+
     string name;
     int age;
     string city;
@@ -12,8 +12,6 @@ struct stPerson
     float monthly_salary;
     char gender;
     bool is_married;
-
-
 };
 
 void ReadPersonInfo(stPerson &person)
@@ -31,7 +29,7 @@ void ReadPersonInfo(stPerson &person)
     cout << "Enter  your gender : ";
     cin >> person.gender;
     cout << "Enter whether you are married (1 for yes, 0 for no) : ";
-    cin >> person.is_married;   
+    cin >> person.is_married;
 };
 
 void PrintPersonInfo(stPerson person)
@@ -40,15 +38,15 @@ void PrintPersonInfo(stPerson person)
     cout << "Age : " << person.age << endl;
     cout << "City : " << person.city << endl;
     cout << "Country : " << person.country << endl;
-    cout << "Monthly Salary : " << person.monthly_salary  << endl;
+    cout << "Monthly Salary : " << person.monthly_salary << endl;
     cout << "Yearly Salary : " << (float)person.monthly_salary * 12 << endl;
     cout << "Gender : " << person.gender << endl;
-    cout << "Is Married : " << person.is_married << endl;           
+    cout << "Is Married : " << person.is_married << endl;
 }
 
 int main()
 {
-    
+
     stPerson person;
     ReadPersonInfo(person);
     PrintPersonInfo(person);

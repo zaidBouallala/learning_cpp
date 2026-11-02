@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 struct stContact
 {
     string name;
@@ -33,7 +32,7 @@ int main()
 {
     stPerson person;
 
-    // ask the user for informations 
+    // ask the user for informations
     cout << "Enter your name : ";
     cin >> person.name;
     cout << "Enter your age : ";
@@ -66,10 +65,10 @@ int main()
     cout << "Age : " << person.age << endl;
     cout << "City : " << person.Address.City << endl;
     cout << "Country : " << person.Address.Country << endl;
-    cout << "Monthly Salary : " << person.monthly_salary  << endl;
+    cout << "Monthly Salary : " << person.monthly_salary << endl;
     cout << "Yearly Salary : " << person.monthly_salary * 12 << endl;
     cout << "Gender : " << person.gender << endl;
-    cout << "Is Married : " << person.is_married << endl; 
+    cout << "Is Married : " << person.is_married << endl;
     cout << "Contact Name : " << person.contact.name << endl;
     cout << "Contact Phone : " << person.contact.phone << endl;
     cout << "Contact Email : " << person.contact.email << endl;

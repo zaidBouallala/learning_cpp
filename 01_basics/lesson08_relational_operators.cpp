@@ -1,4 +1,4 @@
-#include <iostream> 
+#include <iostream>
 using namespace std;
 
 int main()
@@ -6,8 +6,8 @@ int main()
     int a = 5;
     int b = 10;
 
-    cout << "a < b: " << (a < b) << endl; // is a less than b? false
-    cout << "a > b: " << (a > b) << endl; // is a greater than b? true
+    cout << "a < b: " << (a < b) << endl;   // is a less than b? false
+    cout << "a > b: " << (a > b) << endl;   // is a greater than b? true
     cout << "a == b: " << (a == b) << endl; // is a equal to b? false
     cout << "a != b: " << (a != b) << endl; // is a not equal to b? true
     cout << "a <= b: " << (a <= b) << endl; // is a less than or equal to b? false

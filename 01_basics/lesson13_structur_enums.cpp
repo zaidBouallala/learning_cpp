@@ -1,38 +1,49 @@
 #include <iostream>
 using namespace std;
 
+enum enColor
+{
+    Red,
+    Green,
+    Yellow,
+    Blue
+};
+enum enGender
+{
+    Male,
+    Female
+};
+enum eMaritalStatus
+{
+    Single,
+    Married
+};
 
-  enum enColor {Red, Green, Yellow, Blue};
-    enum enGender {Male, Female};
-    enum eMaritalStatus {Single, Married};
+struct stAddress
+{
+    string StreetName;
+    string BuldingNo;
+    string POBOX;
+    string zipCode;
+};
 
-    struct stAddress
-    {
-        string StreetName;
-        string BuldingNo;
-        string POBOX;
-        string zipCode;
-    };
+struct stContactInfo
+{
 
-    struct stContactInfo
-    {
-        
-        string Phone;
-        string Email;
-        stAddress Address;
-    };
+    string Phone;
+    string Email;
+    stAddress Address;
+};
 
-    struct stPerson
-    {
-        string FirstName;
-        string LastName;
-       stContactInfo ContactInfo;
-       eMaritalStatus MaritalStatus;    
-       enGender Gender;
-        enColor FavoriteColor;
-    };
-
-
+struct stPerson
+{
+    string FirstName;
+    string LastName;
+    stContactInfo ContactInfo;
+    eMaritalStatus MaritalStatus;
+    enGender Gender;
+    enColor FavoriteColor;
+};
 
 int main()
 {
@@ -62,8 +73,5 @@ int main()
     cout << "Gender: " << (person1.Gender == enGender::Male ? "Male" : "Female") << endl;
     cout << "Marital Status: " << (person1.MaritalStatus == eMaritalStatus::Single ? "Single" : "Married") << endl;
 
-
-
-
-    return  0;
+    return 0;
 }

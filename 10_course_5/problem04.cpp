@@ -9,49 +9,52 @@ enum enPerfectNotPerfect
     NotPerfect = 2
 };
 
-int readPositiveInteger(string prompt){
+int readPositiveInteger(string prompt)
+{
     int number;
-    do{
+    do
+    {
         cout << prompt;
         cin >> number;
-    }while(number <=0);
+    } while (number <= 0);
     return number;
 }
-enPerfectNotPerfect checkPerfect(int number){
+enPerfectNotPerfect checkPerfect(int number)
+{
     int sum = 0;
-    for(int i = 1; i < number; i++){
-        if(number % i == 0) sum += i;
+    for (int i = 1; i < number; i++)
+    {
+        if (number % i == 0)
+            sum += i;
     }
-    if(sum == number) return Perfect;
-    else return NotPerfect;
+    if (sum == number)
+        return Perfect;
+    else
+        return NotPerfect;
 }
 
-void printAllPerfectNumbers(int limit){
-    cout << "Perfect numbers up to " << limit << " are:"<<endl;
-    for(int i = 1; i <= limit; i++){
-        if(checkPerfect(i) == Perfect){
+void printAllPerfectNumbers(int limit)
+{
+    cout << "Perfect numbers up to " << limit << " are:" << endl;
+    for (int i = 1; i <= limit; i++)
+    {
+        if (checkPerfect(i) == Perfect)
+        {
             cout << i << "\n";
         }
     }
     cout << endl;
 }
 
-
-int main(){
-
+int main()
+{
 
     printAllPerfectNumbers(readPositiveInteger("Please enter a positive integer: "));
 
     return 0;
 }
 
-
-
-
-
-// 
-
-
+//
 
 // #include <iostream>   // Include the iostream library for input and output operations.
 // #include <string>     // Include the string library to work with std::string.
@@ -65,14 +68,14 @@ int main(){
 // int ReadPositiveNumber(string Message)
 // {
 //     int Number = 0;  // Initialize a variable to store the user's input.
-    
+
 //     // Use a do-while loop to ensure that the prompt is shown at least once.
 //     do
 //     {
 //         cout << Message << endl; // Display the prompt message.
 //         cin >> Number;           // Read the number from user input.
 //     } while (Number <= 0);       // Repeat if the entered number is not positive.
-    
+
 //     return Number;  // Return the valid positive number.
 // }
 
@@ -84,7 +87,7 @@ int main(){
 // bool isPerfectNumber(int Number)
 // {
 //     int Sum = 0;  // Initialize the sum of proper divisors.
-    
+
 //     // Loop through all numbers from 1 to Number-1.
 //     // These numbers are potential proper divisors of Number.
 //     for (int i = 1; i < Number; i++)
@@ -93,7 +96,7 @@ int main(){
 //         if (Number % i == 0)
 //             Sum += i;  // Add the divisor to the sum.
 //     }
-    
+
 //     // A number is perfect if the sum of its proper divisors equals the number itself.
 //     return Number == Sum;
 // }
@@ -121,6 +124,6 @@ int main(){
 //     // Call ReadPositiveNumber with a prompt message to obtain a positive number from the user.
 //     // Then pass that number to PrintPerfectNumbersFrom1ToN to print all perfect numbers within the range.
 //     PrintPerfectNumbersFrom1ToN(ReadPositiveNumber("Please enter a positive number?"));
-    
+
 //     return 0;  // Return 0 to indicate successful execution.
 // }

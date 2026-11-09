@@ -3,36 +3,39 @@
 #include <cmath>
 
 using namespace std;
-int readPositiveInteger(string prompt){
+int readPositiveInteger(string prompt)
+{
     int number;
-    do{
+    do
+    {
         cout << prompt;
 
         cin >> number;
-    }while(number <=0);
+    } while (number <= 0);
 
     return number;
 }
 
-void printDigitsInReverse(int number){
-    
+void printDigitsInReverse(int number)
+{
+
     string numberStr = to_string(number);
     int length = numberStr.length();
-    for (int i = length -1;i>=0; i--)cout << numberStr[i] <<endl;
+    for (int i = length - 1; i >= 0; i--)
+        cout << numberStr[i] << endl;
     cout << endl;
 }
-void printDigitsInReverse2(int number){
-    
-   int reminder = 0;
-   while(number > 0){
-    reminder = number % 10;
-    cout << reminder << endl;
-    number /= 10;
-   }
+void printDigitsInReverse2(int number)
+{
+
+    int reminder = 0;
+    while (number > 0)
+    {
+        reminder = number % 10;
+        cout << reminder << endl;
+        number /= 10;
+    }
 }
-
-
-
 
 int main()
 {
@@ -40,13 +43,6 @@ int main()
     printDigitsInReverse2(readPositiveInteger("Please enter a positive integer: "));
     return 0;
 }
-
-
-
-
-
-
-
 
 // #include <iostream>   // Include the iostream library for input/output operations.
 // #include <string>     // Include the string library to work with std::string.
@@ -60,14 +56,14 @@ int main()
 // int ReadPositiveNumber(string Message)
 // {
 //     int Number = 0;  // Initialize a variable to store the user's input.
-    
+
 //     // Use a do-while loop to ensure the prompt is shown at least once.
 //     do
 //     {
 //         cout << Message << endl; // Display the prompt message.
 //         cin >> Number;           // Read the number from the user.
 //     } while (Number <= 0);       // Repeat if the entered number is not positive.
-    
+
 //     return Number;  // Return the validated positive number.
 // }
 
@@ -78,7 +74,7 @@ int main()
 // void PrintDigits(int Number)
 // {
 //     int Sum = 0, Remainder = 0; // Initialize variables. Although 'Sum' is declared, it is not used in this function.
-    
+
 //     // Continue looping while there are digits left in Number.
 //     while (Number > 0)
 //     {
@@ -93,6 +89,6 @@ int main()
 // {
 //     // Call ReadPositiveNumber to get a positive integer from the user and pass it to PrintDigits.
 //     PrintDigits(ReadPositiveNumber("Please enter a positive number?"));
-    
+
 //     return 0;  // Return 0 to indicate that the program executed successfully.
 // }

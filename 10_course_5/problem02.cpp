@@ -2,11 +2,11 @@
 #include <cmath>
 using namespace std;
 
-
-int ReadPositiveInteger(string prompt )
+int ReadPositiveInteger(string prompt)
 {
     int number;
-    do{
+    do
+    {
         cout << prompt;
         cin >> number;
     } while (number <= 0);
@@ -19,20 +19,26 @@ enum enPrimeNotPrime
     NotPrime = 2
 };
 
-enPrimeNotPrime checkPrime(int num){
-    int M = round(num/2);
-    for (int counter = 2; counter <= M; counter++){
-        if(num % counter == 0){
+enPrimeNotPrime checkPrime(int num)
+{
+    int M = round(num / 2);
+    for (int counter = 2; counter <= M; counter++)
+    {
+        if (num % counter == 0)
+        {
             return NotPrime;
         }
     }
     return Prime;
 }
 
-void printPrimes(int limit){
-    cout << "Prime numbers up to " << limit << " are:"<<endl;
-    for(int i = 2; i <= limit; i++){
-        if(checkPrime(i) == Prime){
+void printPrimes(int limit)
+{
+    cout << "Prime numbers up to " << limit << " are:" << endl;
+    for (int i = 2; i <= limit; i++)
+    {
+        if (checkPrime(i) == Prime)
+        {
             cout << i << "\n";
         }
     }
@@ -40,17 +46,11 @@ void printPrimes(int limit){
 }
 int main()
 {
-    
-   
-    printPrimes(ReadPositiveInteger("Please enter a positive integer: "));
 
+    printPrimes(ReadPositiveInteger("Please enter a positive integer: "));
 
     return 0;
 }
-
-
-
-
 
 // #include <iostream>   // Include the iostream library for input/output operations
 // #include <string>     // Include the string library to use std::string
@@ -73,7 +73,7 @@ int main()
 //         // Read the number entered by the user.
 //         cin >> Number;
 //     } while (Number <= 0);  // Continue prompting if the number is not positive.
-    
+
 //     return Number;  // Return the valid positive number.
 // }
 
@@ -82,10 +82,10 @@ int main()
 // // It does this by trying to divide the number by all integers from 2 up to half of the number.
 // enPrimNotPrime CheckPrime(int Number)
 // {
-//     // Calculate half of the number. 
+//     // Calculate half of the number.
 //     // The use of round() here ensures we work with an approximate half even though integer division could be used.
 //     int M = round(Number / 2);
-    
+
 //     // Loop from 2 to M to check if any number divides Number evenly.
 //     for (int Counter = 2; Counter <= M; Counter++)
 //     {
@@ -93,7 +93,7 @@ int main()
 //         if (Number % Counter == 0)
 //             return enPrimNotPrime::NotPrime;  // Return NotPrime if a divisor is found.
 //     }
-    
+
 //     // If no divisors were found, the number is prime.
 //     return enPrimNotPrime::Prime;
 // }
@@ -126,7 +126,7 @@ int main()
 //     // Prompt the user to enter a positive number by calling ReadPositiveNumber,
 //     // then print all prime numbers from 1 up to that number.
 //     PrintPrimeNumbersFrom1ToN(ReadPositiveNumber("Please enter a positive number ? "));
-    
+
 //     // Return 0 to indicate that the program executed successfully.
 //     return 0;
 // }

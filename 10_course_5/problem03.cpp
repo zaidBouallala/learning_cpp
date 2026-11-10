@@ -5,21 +5,25 @@ using namespace std;
 int readPositiveInteger(string prompt)
 {
     int number;
-    do{
+    do
+    {
         cout << prompt << endl;
         cin >> number;
-    }while (number <= 0);
+    } while (number <= 0);
     return number;
 }
 
-bool isPerfectNumber(int number){
+bool isPerfectNumber(int number)
+{
     int sum = 0;
-    for(int i = 1;i < number;i++)
-        if(number % i == 0) sum += i;
+    for (int i = 1; i < number; i++)
+        if (number % i == 0)
+            sum += i;
     return sum == number;
 }
-void printResult(int number){
-    if(isPerfectNumber(number))
+void printResult(int number)
+{
+    if (isPerfectNumber(number))
         cout << number << " is a perfect number." << endl;
     else
         cout << number << " is not a perfect number." << endl;
@@ -30,10 +34,6 @@ int main()
     printResult(readPositiveInteger("Please enter a positive integer: "));
     return 0;
 }
-
-
-
-
 
 // #include <iostream>   // Include the iostream library for input/output operations
 // #include <string>     // Include the string library for using std::string
@@ -51,7 +51,7 @@ int main()
 //         cout << Message << endl; // Display the prompt message.
 //         cin >> Number;           // Read the user's input.
 //     } while (Number <= 0);       // Continue looping until a positive number is entered.
-    
+
 //     return Number;             // Return the validated positive number.
 // }
 
@@ -63,7 +63,7 @@ int main()
 // bool isPerfectNumber(int Number)
 // {
 //     int Sum = 0; // Initialize the sum of divisors to 0.
-    
+
 //     // Loop from 1 to Number - 1 to find all proper divisors.
 //     for (int i = 1; i < Number; i++)
 //     {
@@ -71,7 +71,7 @@ int main()
 //         if (Number % i == 0)
 //             Sum += i; // Add the divisor to the sum.
 //     }
-    
+
 //     // Compare the sum of divisors to the original number.
 //     // Return true if they are equal (the number is perfect), or false if they are not.
 //     return Number == Sum;
@@ -94,6 +94,6 @@ int main()
 // {
 //     // Prompt the user to enter a positive number and then display whether it's a perfect number.
 //     PrintResults(ReadPositiveNumber("Please enter a positive number?"));
-    
+
 //     return 0; // Return 0 to indicate that the program executed successfully.
 // }

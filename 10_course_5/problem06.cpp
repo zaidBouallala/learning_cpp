@@ -3,19 +3,23 @@
 #include <string>
 using namespace std;
 
-int readPositiveInteger(string prompt){
+int readPositiveInteger(string prompt)
+{
     int number;
-    do{
-        cout << prompt ;
+    do
+    {
+        cout << prompt;
         cin >> number;
 
-    }while(number <= 0);
+    } while (number <= 0);
     return number;
 }
 
-int idontknow(int number){
+int idontknow(int number)
+{
     int reminder = 0, sum = 0;
-    while(number >  0){
+    while (number > 0)
+    {
         reminder = number % 10;
         sum += reminder;
         number /= 10;
@@ -23,19 +27,17 @@ int idontknow(int number){
     return sum;
 }
 
-void printResult(int number){
-    
+void printResult(int number)
+{
+
     cout << "The sum of the digits of " << number << " is: " << idontknow(number) << endl;
 }
-int main(){
-
+int main()
+{
 
     printResult(readPositiveInteger("Please enter a positive integer: "));
-    return 0;  
+    return 0;
 }
-
-
-
 
 // #include <iostream>   // Include the iostream library for input/output operations.
 // #include <string>     // Include the string library to work with std::string.
@@ -49,7 +51,7 @@ int main(){
 // int ReadPositiveNumber(string Message)
 // {
 //     int Number = 0;  // Initialize a variable to store the user's input.
-    
+
 //     // Use a do-while loop to ensure the prompt is displayed at least once.
 //     do
 //     {
@@ -77,7 +79,7 @@ int main(){
 //         Number = Number / 10;    // Remove the last digit from Number.
 //         Sum = Sum + Remainder;   // Add the extracted digit to the cumulative sum.
 //     }
-    
+
 //     return Sum;  // Return the calculated sum of digits.
 // }
 
@@ -86,9 +88,9 @@ int main(){
 // {
 //     // Prompt the user to enter a positive number and then calculate the sum of its digits.
 //     // The result is then printed to the console with an explanatory message.
-//     cout << "\nSum Of Digits = " 
+//     cout << "\nSum Of Digits = "
 //          << SumOfDigits(ReadPositiveNumber("Please enter a positive number?"))
 //          << "\n";
-    
+
 //     return 0;  // Return 0 to indicate that the program executed successfully.
 // }

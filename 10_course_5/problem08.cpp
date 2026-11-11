@@ -3,39 +3,38 @@
 #include <cmath>
 
 using namespace std;
-int readPositiveInteger(string prompt){
+int readPositiveInteger(string prompt)
+{
     int number;
-    do{
+    do
+    {
         cout << prompt;
 
         cin >> number;
-    }while(number <=0);
+    } while (number <= 0);
 
     return number;
 }
-void countDigitOccurrences(int number, int target){
-   int reminder = 0 ,counter = 0;
-   while(number > 0){
-    reminder = number % 10;
-    if(reminder == target) counter++;
-    number /= 10;
-   }
-   cout << "The digit " << target << " appears " << counter << " times." << endl;
+void countDigitOccurrences(int number, int target)
+{
+    int reminder = 0, counter = 0;
+    while (number > 0)
+    {
+        reminder = number % 10;
+        if (reminder == target)
+            counter++;
+        number /= 10;
+    }
+    cout << "The digit " << target << " appears " << counter << " times." << endl;
 }
-                 
-
-
 
 int main()
 {
-    //printDigitsInReverse(readPositiveInteger("Please enter a positive integer: "));
-    countDigitOccurrences(readPositiveInteger("Please enter a positive integer: "), readPositiveInteger("Please enter the digit to count: ") );
-
+    // printDigitsInReverse(readPositiveInteger("Please enter a positive integer: "));
+    countDigitOccurrences(readPositiveInteger("Please enter a positive integer: "), readPositiveInteger("Please enter the digit to count: "));
 
     return 0;
 }
-
-
 
 // #include <iostream>   // Include the iostream library for input/output operations.
 // using namespace std;  // Use the standard namespace to simplify access to standard functions.
@@ -68,13 +67,13 @@ int main()
 // {
 //     int FreqCount = 0;   // Initialize the frequency counter to zero.
 //     int Remainder = 0;   // Variable to store the digit extracted from the number.
-    
+
 //     // Process each digit of Number until there are no digits left.
 //     while (Number > 0)
 //     {
 //         Remainder = Number % 10;  // Extract the last digit of Number.
 //         Number = Number / 10;     // Remove the last digit from Number.
-        
+
 //         // If the extracted digit matches the digit to check, increment the counter.
 //         if (DigitToCheck == Remainder)
 //         {
@@ -92,10 +91,10 @@ int main()
 //     // Prompt the user to enter a digit whose frequency is to be checked.
 //     // Although the function returns an int, it is stored in a short variable as we expect a single digit.
 //     short DigitToCheck = ReadPositiveNumber("Please enter one digit to check?");
-    
+
 //     // Display the result: the frequency of the specified digit within the main number.
 //     cout << "\nDigit " << DigitToCheck << " Frequency is "
 //          << CountDigitFrequency(DigitToCheck, Number) << " Time(s).\n";
-    
+
 //     return 0;  // Return 0 to indicate successful program execution.
 // }

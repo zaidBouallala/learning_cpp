@@ -4,34 +4,38 @@
 
 using namespace std;
 
-int readPositiveInteger(string prompt){
+int readPositiveInteger(string prompt)
+{
     int number;
-    do{
-        cout << prompt<<endl;
+    do
+    {
+        cout << prompt << endl;
 
         cin >> number;
-    }while(number <=0);
+    } while (number <= 0);
 
     return number;
 }
 
-void printR(int number){
+void printR(int number)
+{
     // int stop = number;
     // for(int row = 1 ; row <= stop  ; row++){
     //     for(int col = number; col > 0; col--){
     //         cout << number ;
     //     }
     //     number--;
-    //     cout << endl; 
+    //     cout << endl;
     // }
 
-    for(int row = number; row > 0 ; row--){
-        for(int col = 1; col <= row; col++){
+    for (int row = number; row > 0; row--)
+    {
+        for (int col = 1; col <= row; col++)
+        {
             cout << row;
         }
         cout << endl;
     }
-
 }
 
 int main()
@@ -40,13 +44,6 @@ int main()
 
     return 0;
 }
-
-
-
-
-
-
-
 
 // #include <iostream>   // Include iostream for input/output operations.
 // #include <string>     // Include string to work with std::string.
@@ -65,7 +62,7 @@ int main()
 //         cout << Message << endl;  // Display the prompt message.
 //         cin >> Number;            // Read the number entered by the user.
 //     } while (Number <= 0);        // Repeat if the number is not positive.
-    
+
 //     return Number;  // Return the validated positive number.
 // }
 
@@ -76,7 +73,7 @@ int main()
 // void PrintInvertedNumberPattern(int Number)
 // {
 //     cout << "\n";  // Print an empty line for formatting.
-    
+
 //     // Outer loop: Starts from the given number and decrements to 1.
 //     for (int i = Number; i >= 1; i--)
 //     {
@@ -86,7 +83,7 @@ int main()
 //         {
 //             cout << i;  // Print the digit 'i' without a space.
 //         }
-        
+
 //         cout << "\n";  // After printing one line, move to the next line.
 //     }
 // }
@@ -96,6 +93,6 @@ int main()
 // {
 //     // Read a positive number from the user and pass it to the PrintInvertedNumberPattern function.
 //     PrintInvertedNumberPattern(ReadPositiveNumber("Please enter a positive number?"));
-    
+
 //     return 0;  // Return 0 to indicate successful execution.
 // }

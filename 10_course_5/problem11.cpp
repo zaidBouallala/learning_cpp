@@ -3,27 +3,30 @@
 #include <cmath>
 
 using namespace std;
-int readPositiveInteger(string prompt){
+int readPositiveInteger(string prompt)
+{
     int number;
-    do{
+    do
+    {
         cout << prompt;
 
         cin >> number;
-    }while(number <=0);
+    } while (number <= 0);
 
     return number;
 }
 
+int reverseNumber(int number)
+{
 
-int reverseNumber(int number){
-    
-   int reminder = 0 ,newNumber = 0;
-   while(number > 0){
-    reminder = number % 10;
-   newNumber = newNumber * 10 + reminder;
-    number /= 10;
-   }
-   return newNumber;
+    int reminder = 0, newNumber = 0;
+    while (number > 0)
+    {
+        reminder = number % 10;
+        newNumber = newNumber * 10 + reminder;
+        number /= 10;
+    }
+    return newNumber;
 }
 // void idontKnow(int number, int reverseNumber){
 //     int reminderNumber = 0, reminderReverseNumber = 0;
@@ -40,25 +43,25 @@ int reverseNumber(int number){
 //     cout << "The number is a palindrome." << endl;
 // }
 
-bool isPalindromeNumber(int number){
+bool isPalindromeNumber(int number)
+{
     return number == reverseNumber(number);
 }
 
 int main()
 {
-   // printDigits(readPositiveInteger("Please enter a positive integer: "));
-  
-    if(isPalindromeNumber(readPositiveInteger("Please enter a positive integer: "))){
+    // printDigits(readPositiveInteger("Please enter a positive integer: "));
+
+    if (isPalindromeNumber(readPositiveInteger("Please enter a positive integer: ")))
+    {
         cout << "The number is a palindrome." << endl;
     }
-    else{
+    else
+    {
         cout << "The number is not a palindrome." << endl;
     }
     return 0;
 }
-
-
-
 
 // #include <iostream>   // Include iostream for input/output operations.
 // #include <string>     // Include string to work with std::string.
@@ -77,7 +80,7 @@ int main()
 //         cout << Message << endl;  // Display the prompt message.
 //         cin >> Number;            // Read the number from the user.
 //     } while (Number <= 0);        // Continue prompting if the number is not positive.
-    
+
 //     return Number;  // Return the validated positive number.
 // }
 
@@ -90,7 +93,7 @@ int main()
 // {
 //     int Remainder = 0;  // Variable to store the last digit extracted from the number.
 //     int Number2 = 0;    // Variable to accumulate the reversed number.
-    
+
 //     // Process each digit until the original number becomes 0.
 //     while (Number > 0)
 //     {
@@ -98,7 +101,7 @@ int main()
 //         Number = Number / 10;             // Remove the last digit from Number.
 //         Number2 = Number2 * 10 + Remainder; // Append the extracted digit to Number2.
 //     }
-    
+
 //     return Number2;  // Return the reversed number.
 // }
 
@@ -121,6 +124,6 @@ int main()
 //         cout << "\nYes , it is a Palindrome number.\n";  // If true, print affirmative message.
 //     else
 //         cout << "\nNo , it is NOT a Palindrome number.\n"; // Otherwise, print negative message.
-    
+
 //     return 0;  // Return 0 to indicate successful program execution.
 // }

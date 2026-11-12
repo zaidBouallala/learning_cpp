@@ -1,6 +1,6 @@
-#include <iostream>   // Include iostream for input/output operations.
-#include <string>     // Include string to work with std::string.
-using namespace std;  // Use the standard namespace to avoid prefixing std:: to standard functions.
+#include <iostream>  // Include iostream for input/output operations.
+#include <string>    // Include string to work with std::string.
+using namespace std; // Use the standard namespace to avoid prefixing std:: to standard functions.
 
 // Function: ReadPositiveNumber
 // Purpose: Prompts the user with a custom message to enter a positive number.
@@ -9,14 +9,14 @@ using namespace std;  // Use the standard namespace to avoid prefixing std:: to 
 // Returns: A positive integer entered by the user.
 int ReadPositiveNumber(string Message)
 {
-    int Number = 0;  // Variable to store the user's input.
+    int Number = 0; // Variable to store the user's input.
     do
     {
-        cout << Message << endl;  // Display the prompt message.
-        cin >> Number;            // Read the number entered by the user.
-    } while (Number <= 0);        // Repeat if the number is not positive.
-    
-    return Number;  // Return the validated positive number.
+        cout << Message << endl; // Display the prompt message.
+        cin >> Number;           // Read the number entered by the user.
+    } while (Number <= 0); // Repeat if the number is not positive.
+
+    return Number; // Return the validated positive number.
 }
 
 // Function: PrintInvertedNumberPattern
@@ -25,8 +25,8 @@ int ReadPositiveNumber(string Message)
 // Parameter: Number - the starting number and the maximum count of digits to print in the first line.
 void PrintInvertedNumberPattern(int Number)
 {
-    cout << "\n";  // Print an empty line for formatting.
-    
+    cout << "\n"; // Print an empty line for formatting.
+
     // Outer loop: Starts from the given number and decrements to 1.
     for (int row = Number; row >= 1; row--)
     {
@@ -34,10 +34,10 @@ void PrintInvertedNumberPattern(int Number)
         // It runs from 1 up to the current value of 'row'.
         for (int col = 1; col <= row; col++)
         {
-            cout << row;  // Print the digit 'row' without a space.
+            cout << row; // Print the digit 'row' without a space.
         }
-        
-        cout << "\n";  // After printing one line, move to the next line.
+
+        cout << "\n"; // After printing one line, move to the next line.
     }
 }
 
@@ -46,16 +46,6 @@ int main()
 {
     // Read a positive number from the user and pass it to the PrintInvertedNumberPattern function.
     PrintInvertedNumberPattern(ReadPositiveNumber("Please enter a positive number?"));
-    
-    return 0;  // Return 0 to indicate successful execution.
+
+    return 0; // Return 0 to indicate successful execution.
 }
-
-
-
-
-
-
-
-
-
-

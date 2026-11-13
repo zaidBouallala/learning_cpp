@@ -10,26 +10,25 @@ int readPositiveNumber(string Message)
         cout << Message << endl;
         cin >> Number;
     } while (Number <= 0);
-    
+
     return Number;
 }
 
 void PrintLetterPattern(int Number)
 {
-    cout << "\n";  // Print an empty line for formatting.
-    
+    cout << "\n"; // Print an empty line for formatting.
+
     // Outer loop: Starts from the given number and decrements to 1.
-    for (int i = 65  ; i <= 65 + Number -1; i++)
+    for (int i = 65; i <= 65 + Number - 1; i++)
     {
-        for (int j = 1; j <= i-65+1; j++)  // i-65+1 or Number - ((65 + Number - 1) - i) or Number -(65 - i + 1 +Number) gives the count of letters to print in the current line.
+        for (int j = 1; j <= i - 65 + 1; j++) // i-65+1 or Number - ((65 + Number - 1) - i) or Number -(65 - i + 1 +Number) gives the count of letters to print in the current line.
         {
-            cout << char(i);  // Print the letter 'i' without a space.
+            cout << char(i); // Print the letter 'i' without a space.
         }
-        
-        cout << "\n";  // After printing one line, move to the next line.
+
+        cout << "\n"; // After printing one line, move to the next line.
     }
 }
-
 
 int main()
 {
@@ -38,9 +37,6 @@ int main()
 
     return 0;
 }
-
-
- 
 
 // #include <iostream>   // Include iostream for input/output operations.
 // #include <string>     // Include string to work with std::string.
@@ -59,7 +55,7 @@ int main()
 //         cout << Message << endl;  // Display the prompt message.
 //         cin >> Number;            // Read the user's input.
 //     } while (Number <= 0);        // Repeat if the number is not positive.
-    
+
 //     return Number;  // Return the validated positive number.
 // }
 
@@ -75,7 +71,7 @@ int main()
 // void PrintLetterPattern(int Number)
 // {
 //     cout << "\n";  // Print an empty line for formatting.
-   
+
 //     // Outer loop: Iterates from ASCII value 65 ('A') to (65 + Number - 1).
 //     // Each iteration corresponds to a row in the pattern.
 //     for (int i = 65; i <= 65 + Number - 1; i++)
@@ -87,7 +83,7 @@ int main()
 //         {
 //             cout << char(i);  // Convert the ASCII value to its corresponding character and print it.
 //         }
-       
+
 //         cout << "\n";  // Move to the next line after printing the current row.
 //     }
 // }
@@ -97,6 +93,6 @@ int main()
 // {
 //     // Read a positive number from the user and then print the letter pattern based on that number.
 //     PrintLetterPattern(ReadPositiveNumber("Please enter a positive number?"));
-    
+
 //     return 0;  // Return 0 to indicate that the program executed successfully.
 // }

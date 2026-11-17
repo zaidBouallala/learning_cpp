@@ -1,10 +1,7 @@
-#include <iostream>     
+#include <iostream>
 #include <string>
 
 using namespace std;
-
-
-
 
 string readName(string Message)
 {
@@ -14,22 +11,26 @@ string readName(string Message)
     return name;
 }
 
-void printName(string name , string Message)
+void printName(string name, string Message)
 {
     cout << Message << endl;
     cout << name << endl;
 }
 
-string encryptionName(string name, short encryptionKey){
-    string encryptedName= "";
-    for(int i = 0; i < name.length(); i++){
+string encryptionName(string name, short encryptionKey)
+{
+    string encryptedName = "";
+    for (int i = 0; i < name.length(); i++)
+    {
         encryptedName += char(name[i] + encryptionKey);
     }
     return encryptedName;
 }
-string decryptionName(string encryptedName, short encryptionKey){
-    string decryptedName= "";
-    for(int i = 0; i < encryptedName.length(); i++){
+string decryptionName(string encryptedName, short encryptionKey)
+{
+    string decryptedName = "";
+    for (int i = 0; i < encryptedName.length(); i++)
+    {
         decryptedName += char(encryptedName[i] - encryptionKey);
     }
     return decryptedName;
@@ -39,22 +40,12 @@ int main()
 {
     short encryptionKey = 2;
     string name = readName("Please enter your name: ");
- printName(name, "Your name is: ");
- printName(encryptionName(name, encryptionKey), "Your encrypted name is: ");
- printName(decryptionName(encryptionName(name, encryptionKey), encryptionKey), "Your decrypted name is: ");
-
-
+    printName(name, "Your name is: ");
+    printName(encryptionName(name, encryptionKey), "Your encrypted name is: ");
+    printName(decryptionName(encryptionName(name, encryptionKey), encryptionKey), "Your decrypted name is: ");
 
     return 0;
 }
-
-
-
-
-
-
-
-
 
 //
 // #include <iostream>   // Include the iostream library for input/output operations.
@@ -67,10 +58,10 @@ int main()
 // string ReadText()
 // {
 //     string Text;  // Declare a string variable to store the input text.
-    
+
 //     cout << "Please enter Text?\n"; // Prompt the user for input.
 //     getline(cin, Text);              // Read an entire line from standard input.
-    
+
 //     return Text; // Return the entered text.
 // }
 
@@ -83,7 +74,7 @@ int main()
 // string EncryptText(string Text, short EncryptionKey)
 // {
 //     // Loop through each character of the text.
-//     // Note: Using "<= Text.length()" iterates one extra time (accessing the null terminator), 
+//     // Note: Using "<= Text.length()" iterates one extra time (accessing the null terminator),
 //     // which may be unintended. Ideally, use "< Text.length()".
 //     for (int i = 0; i <= Text.length(); i++)
 //     {
@@ -120,13 +111,13 @@ int main()
 //     const short EncryptionKey = 2; // Define a constant encryption key to be used for both encryption and decryption.
 
 //     string TextAfterEncryption, TextAfterDecryption;  // Variables to store the encrypted and decrypted text.
-    
+
 //     // Read the original text from the user.
 //     string Text = ReadText();
-    
+
 //     // Encrypt the text using the specified encryption key.
 //     TextAfterEncryption = EncryptText(Text, EncryptionKey);
-    
+
 //     // Decrypt the text back to its original form using the same encryption key.
 //     TextAfterDecryption = DecryptText(TextAfterEncryption, EncryptionKey);
 

@@ -1,9 +1,9 @@
-#include <iostream>   // Include the iostream library for input/output operations.
-#include <string>     // Include the string library (not used in this example but available if needed).
-#include <cstdlib>    // Include cstdlib for rand() and srand() functions.
-#include <ctime>      // Include ctime for the time() function, used for seeding the random number generator.
+#include <iostream> // Include the iostream library for input/output operations.
+#include <string>   // Include the string library (not used in this example but available if needed).
+#include <cstdlib>  // Include cstdlib for rand() and srand() functions.
+#include <ctime>    // Include ctime for the time() function, used for seeding the random number generator.
 
-using namespace std;  // Use the standard namespace to simplify access to standard library functions.
+using namespace std; // Use the standard namespace to simplify access to standard library functions.
 
 // Function: RandomNumber
 // Purpose: Generates a random integer between two specified values, inclusive.
@@ -17,16 +17,17 @@ int RandomNumber(int From, int To)
     // rand() % (To - From + 1) gives a value between 0 and (To - From),
     // then adding From shifts this range to [From, To].
     int randNum = rand() % (To - From + 1) + From;
-    return randNum;  // Return the generated random number.
+    return randNum; // Return the generated random number.
 }
 
 // Enumeration: enCharType
 // Purpose: Defines different character types for random character generation.
-enum enCharType { 
-    SamallLetter = 1,    // Represents lowercase letters (ASCII 97 to 122).
-    CapitalLetter = 2,   // Represents uppercase letters (ASCII 65 to 90).
-    SpecialCharacter = 3,// Represents special characters (ASCII 33 to 47).
-    Digit = 4            // Represents digits (ASCII 48 to 57).
+enum enCharType
+{
+    SamallLetter = 1,     // Represents lowercase letters (ASCII 97 to 122).
+    CapitalLetter = 2,    // Represents uppercase letters (ASCII 65 to 90).
+    SpecialCharacter = 3, // Represents special characters (ASCII 33 to 47).
+    Digit = 4             // Represents digits (ASCII 48 to 57).
 };
 
 // Function: GetRandomCharacter
@@ -43,7 +44,7 @@ char GetRandomCharacter(enCharType CharType)
     {
         // Generate a random lowercase letter (ASCII codes 97 to 122).
         return char(RandomNumber(97, 122));
-        break;  // break is not strictly needed after a return.
+        break; // break is not strictly needed after a return.
     }
     case enCharType::CapitalLetter:
     {
@@ -75,12 +76,12 @@ int main()
     srand((unsigned)time(NULL));
 
     // Generate and print one random character for each character type.
-    cout << GetRandomCharacter(enCharType::SamallLetter) << endl;      // Random lowercase letter.
-    cout << GetRandomCharacter(enCharType::CapitalLetter) << endl;     // Random uppercase letter.
-    cout << GetRandomCharacter(enCharType::SpecialCharacter) << endl;  // Random special character.
-    cout << GetRandomCharacter(enCharType::Digit) << endl;             // Random digit.
+    cout << GetRandomCharacter(enCharType::SamallLetter) << endl;     // Random lowercase letter.
+    cout << GetRandomCharacter(enCharType::CapitalLetter) << endl;    // Random uppercase letter.
+    cout << GetRandomCharacter(enCharType::SpecialCharacter) << endl; // Random special character.
+    cout << GetRandomCharacter(enCharType::Digit) << endl;            // Random digit.
 
-    return 0;  // Return 0 to indicate successful program execution.
+    return 0; // Return 0 to indicate successful program execution.
 }
 
 // #include <iostream>
@@ -90,9 +91,9 @@ int main()
 
 // using namespace std;
 
-// enum types { 
-//     RANDOM_NUMBER = 1, 
-//     RANDOM_UPPER_LETTER = 2, 
+// enum types {
+//     RANDOM_NUMBER = 1,
+//     RANDOM_UPPER_LETTER = 2,
 //     RANDOM_LOWER_LETTER = 3,
 //     RANDOM_SPECIAL_CHARACTER = 4,
 // };
@@ -100,13 +101,12 @@ int main()
 //     return rand() % (max - min + 1) + min;
 // }
 
-
 // void print(){
-    
+
 //         cout << reandomNumber(0, 9) << endl;
 //         cout << reandomNumber(0, 9) << endl;
 //         cout << reandomNumber(0, 9) << endl;
-  
+
 // }
 
 // void printRandomThings(types identity)
@@ -129,10 +129,10 @@ int main()
 //         cout << reandomNumber(0, 9) << endl;
 //         break;
 //     }
-    
+
 // }
 // int main()
-// { 
+// {
 //     srand((unsigned)time(NULL));
 
 //    int choice;

@@ -1,7 +1,7 @@
 
-#include <iostream>   // Include the iostream library for input/output operations.
+#include <iostream> // Include the iostream library for input/output operations.
 #include <cstdlib>
-using namespace std;  // Use the standard namespace to avoid prefixing std:: to common functions.
+using namespace std; // Use the standard namespace to avoid prefixing std:: to common functions.
 
 // Function: ReadPositiveNumber
 // Purpose: Prompts the user with a custom message to enter a positive number.
@@ -16,65 +16,64 @@ int RandomNumber(int From, int To)
     return randNum;
 }
 
-
 int ReadPositiveNumber(string Message)
 {
-    int Number = 0;  // Variable to store the user's input.
+    int Number = 0; // Variable to store the user's input.
     do
     {
         cout << Message << endl; // Display the prompt message.
         cin >> Number;           // Read the number entered by the user.
-    } while (Number <= 0);       // Continue prompting if the number is not positive.
-    
-    return Number;  // Return the validated positive number.
+    } while (Number <= 0); // Continue prompting if the number is not positive.
+
+    return Number; // Return the validated positive number.
 }
 
 void ReadArray(int arr[100], int &arrLength)
 {
     cout << "\nEnter number of elements:\n";
-    cin >> arrLength;  // Read the total number of elements the user wishes to input.
-    
+    cin >> arrLength; // Read the total number of elements the user wishes to input.
+
     cout << "\nEnter array elements: \n";
     // Loop from 0 to arrLength - 1 to read each array element.
     for (int i = 0; i < arrLength; i++)
     {
-       
-        arr[i]= RandomNumber(0,100);                          
+
+        arr[i] = RandomNumber(0, 100);
     }
     cout << endl;
 }
-
 
 void PrintArray(int arr[100], int arrLength)
 {
     // Loop through the array and print each element followed by a space.
     for (int i = 0; i < arrLength; i++)
         cout << arr[i] << " ";
-    
-    cout << "\n";  // Print a newline after all elements are printed.
+
+    cout << "\n"; // Print a newline after all elements are printed.
 }
 
-int maxElement(int arr[], int arrLength){
-    int max  = arr[0];
-    for(int i = 1 ; i< arrLength ; i++){
-        if(arr[i] > max) max = arr[i];
+int maxElement(int arr[], int arrLength)
+{
+    int max = arr[0];
+    for (int i = 1; i < arrLength; i++)
+    {
+        if (arr[i] > max)
+            max = arr[i];
     }
     return max;
-} 
+}
 
-
-
-int main() {
+int main()
+{
     srand((unsigned)time(NULL));
-    int arr[100];      // Declare an array to hold up to 100 integers.
-    int arrLength;     // Variable to store the number of elements in the array.
+    int arr[100];  // Declare an array to hold up to 100 integers.
+    int arrLength; // Variable to store the number of elements in the array.
 
     ReadArray(arr, arrLength);
 
     cout << "\nOriginal array: ";
     PrintArray(arr, arrLength);
 
-    cout << "\nMaximum element: " << maxElement(arr, arrLength) << endl; 
-    return 0; 
-
-}    
+    cout << "\nMaximum element: " << maxElement(arr, arrLength) << endl;
+    return 0;
+}

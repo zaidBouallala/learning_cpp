@@ -1,7 +1,7 @@
 
-#include <iostream>   // Include the iostream library for input/output operations.
+#include <iostream> // Include the iostream library for input/output operations.
 #include <cstdlib>
-using namespace std;  // Use the standard namespace to avoid prefixing std:: to common functions.
+using namespace std; // Use the standard namespace to avoid prefixing std:: to common functions.
 
 // Function: ReadPositiveNumber
 // Purpose: Prompts the user with a custom message to enter a positive number.
@@ -16,37 +16,35 @@ int RandomNumber(int From, int To)
     return randNum;
 }
 
-
 int ReadPositiveNumber(string Message)
 {
-    int Number = 0;  // Variable to store the user's input.
+    int Number = 0; // Variable to store the user's input.
     do
     {
         cout << Message << endl; // Display the prompt message.
         cin >> Number;           // Read the number entered by the user.
-    } while (Number <= 0);       // Continue prompting if the number is not positive.
-    
-    return Number;  // Return the validated positive number.
+    } while (Number <= 0); // Continue prompting if the number is not positive.
+
+    return Number; // Return the validated positive number.
 }
 
 void ReadArray(int arr[100], int arrLength)
 {
     for (int i = 0; i < arrLength; i++)
     {
-       
-        arr[i]= RandomNumber(0,100);                          
+
+        arr[i] = RandomNumber(0, 100);
     }
     cout << endl;
 }
-
 
 void PrintArray(int arr[100], int arrLength)
 {
     // Loop through the array and print each element followed by a space.
     for (int i = 0; i < arrLength; i++)
         cout << arr[i] << " ";
-    
-    cout << "\n";  // Print a newline after all elements are printed.
+
+    cout << "\n"; // Print a newline after all elements are printed.
 }
 
 void Swap(int &a, int &b)
@@ -61,17 +59,17 @@ void shuffleArray(int arr[100], int arrLength)
     for (int i = 0; i < arrLength; i++)
     {
         int randomIndex = RandomNumber(0, arrLength - 1); // Generate a random index within the array bounds.
-        Swap(arr[i], arr[randomIndex]); // Swap the current element with the element at the random index.
+        Swap(arr[i], arr[randomIndex]);                   // Swap the current element with the element at the random index.
     }
 }
 
-
-int main() {
+int main()
+{
     srand((unsigned)time(NULL));
 
     int arr1[100], arr2[100];
-         // Declare an array to hold up to 100 integers.
-    int arrLength = ReadPositiveNumber("Enter the number of elements in the arrays: ");  // Read the desired length of the arrays from the user.
+    // Declare an array to hold up to 100 integers.
+    int arrLength = ReadPositiveNumber("Enter the number of elements in the arrays: "); // Read the desired length of the arrays from the user.
 
     ReadArray(arr1, arrLength);
 
@@ -80,8 +78,6 @@ int main() {
     shuffleArray(arr1, arrLength);
     cout << "\narray 1 after shuffle : ";
     PrintArray(arr1, arrLength);
-  
-   
-    return 0; 
 
-}    
+    return 0;
+}
